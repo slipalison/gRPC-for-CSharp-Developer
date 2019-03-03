@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option java_multiple_files = true; 
+option java_package = "io.grpc.exemples.test";
+option java_outer_classname = "TestProto";
+
+package TestProto;
+
+service Maroto{
+    rpc TesteMaroto(ObjetoEntrada) returns (ObjetoSaida){}
+}
+
+message ObjetoEntrada {
+    string nome = 1;
+    string idade = 2;
+}
+
+message ObjetoSaida {
+    string nome = 1;
+    string idade = 2;
+}
